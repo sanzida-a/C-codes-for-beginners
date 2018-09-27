@@ -1,0 +1,50 @@
+#include<stdio.h>
+
+int main()
+{
+    char x[100],y[100];
+    gets(x);
+
+    int m,i,j,k=0,c;
+    
+    for(m = 0; x[m]; m++){
+        x[m] = tolower(x[m]);
+    }
+
+    for(i=0;x[i]!='\0';i++)
+    {
+        c=0;
+        for(j=0;x[j]!='\0';j++)
+        {
+            if(x[i]==x[j])
+            {
+
+                c++;
+            }
+        }
+        
+         if(x[i]!=' ')
+            {
+                   y[k]=x[i];
+                    k++;
+
+            }
+
+    if(x[i]!=' ')
+    {
+        for(j=0;j<k;j++)
+        {
+            if(x[i]==y[j])
+            {
+                 printf("\n%c= %d",x[i],c);
+
+                  j=k;
+
+            }
+        }
+    }
+    }
+
+   return 0;
+
+}
