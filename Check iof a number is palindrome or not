@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+    char x[100],y[100];
+    int i,j=0,s,k=0;
+    gets(x);
+
+    for(i=0;x[i]!='\0';i++)
+    {
+        y[i]=x[i];
+    }
+    y[i]='\0';
+
+    s=i;
+    for(i=i-1;i>=0;i--)
+    {
+        if(x[i]==y[j])
+        {
+            k++;
+        }
+        j++;
+    }
+    if(s==k)
+    {
+        printf("palindrome Number");
+    }
+    else{
+        printf("Not palindrome ");
+    }
+
+    return 0;
+}
