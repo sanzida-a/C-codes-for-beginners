@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+int main()
+{
+	char str[100], sub[50], temp[200];
+	int i, p, stl = 0, sul = 0;
+	printf("Enter a string\n");
+	gets_s(str);
+	printf("Enter the substring\n");
+	gets_s(sub);
+	printf("Enter the position\n");
+	scanf("%d", &p);
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		stl++;
+	}
+	for (i = 0; sub[i] != '\0'; i++)
+	{
+		sul++;
+	}
+	for (i = p; i<stl; i++)
+	{
+		str[i + sul] = str[i];
+	}
+	for (i = 0; i<sul; i++)
+	{
+		str[p + i] = sub[i];
+	}
+	str[stl + sul] = '\0';
+	puts(str);
+	_getch();
+	return 0;
+}
