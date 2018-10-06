@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char str[100], sub[100];
+	int i, j, k, l, g = 0, m, h, v;
+	printf("Enter the string:\n");
+	gets_s(str);
+	printf("Enter the substring:\n");
+	gets_s(sub);
+	m = strlen(str);
+	l = strlen(sub);
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		k = i;
+		for (j = 0; sub[j] != '\0'; j++)
+		{
+			if (str[k] == sub[j])
+			{
+				g++;
+				if (g == l)
+					h = i;			
+			}
+			else
+			{
+				break;
+			}
+			k++;
+		}
+	}
+	for (i = 0; i < m; i++)
+	{
+		if (i < h)
+			printf("%c", str[i]);
+		if (i > h && i < (h + l))
+			continue;
+		else if (i > h)
+			printf("%c", str[i]);
+	}
+
+	return 0;
+}
+
