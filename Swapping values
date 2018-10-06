@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+	int M,N,t;
+	printf("Enter the value of M and N\n");
+	scanf("%d%d",&M,&N);
+
+	t=M;
+	M=N;
+	N=t;
+
+	printf("Now the value of M is %d\n",M);
+	printf("And the value of N is %d",N);
+
+    return 0;
+}
+
