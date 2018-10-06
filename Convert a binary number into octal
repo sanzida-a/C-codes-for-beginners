@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+   
+    long int bin,oct,j,rem;
+	oct=0;
+	j=1;
+    printf("Enter any number any binary number: ");
+    scanf("%ld",&bin);
+	
+    while(bin!=0)
+	{
+        rem=bin%10;
+        oct=oct+rem*j;
+        j=j*2;
+        bin=bin/10;
+    }
+
+    printf("Equivalent octal value: %lo",oct);
+    
+    return 0;
+}
+
+
+
+
+
