@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+void main()
+{
+	char str[100];;
+	int i, j, k, n, len = 0;
+	printf("String :\n");
+	gets_s(str);
+	printf("No. of characters to rotate\n");
+	scanf("%d", &n);
+	len = strlen(str);
+	for (i = n - 1; i<n; i++)
+	{
+		for (j = len - n; j<len; j++)
+			printf("%c", str[j]);
+		for (k = 0; k<len - n; k++)
+			printf("%c", str[k]);
+	}
+  
+}
+
