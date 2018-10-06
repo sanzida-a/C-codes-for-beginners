@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+int main()
+{
+	char str[100], word[50];
+	int i, j = 0;
+	printf("Enter the string:\n");
+	gets_s(str);
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] == ' ')
+		{
+			word[j] = '\0';
+			printf("%s\n", word);
+			j = 0;
+		}
+		else
+			word[j++] = str[i];
+	}
+	word[j] = '\0';
+	printf("%s\n", word);
+	_getch();
+	return 0;
+}
+
+
