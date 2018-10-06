@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+	int x[500], i, n, inp;
+	printf("Enter the number of inputs\n");
+	scanf("%d", &n);
+	printf("Enter the numbers\n");
+	for (i = 0; i<n; i++) {
+		scanf("%d", &x[i]);
+	}
+	printf("enter any number\n");
+	scanf("%d", &inp);
+
+	for (i = 0; i<n; i++) {
+		if (x[i] == inp) {
+			x[i] = -555;
+			printf("After replacement:\n %d\n", x[i]);
+		}
+		else
+			printf("No replacement :\n %d\n", x[i]);
+	}
+	return 0;
+}
+
