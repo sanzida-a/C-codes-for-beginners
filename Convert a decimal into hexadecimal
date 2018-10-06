@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+
+  long int dec;
+
+  printf("Enter any decimal number: ");
+  scanf("%d",&dec);
+
+  printf("Equivalent hexadecimal number is: %X",dec);
+
+  return 0;
+}
